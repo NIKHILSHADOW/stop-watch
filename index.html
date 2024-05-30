@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StopWatch</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./index.js" defer></script>
+  </head>
+  <body class="container">
+    <h1 class="text-center">Stop watch</h1>
+    <div class="card">
+      <div class="display">
+        <form>
+          <table class="table">
+            <thead>
+              <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr scope="row">
+                <td>
+                  <label for="timer">Timer :</label>
+                </td>
+                <td>
+                  <input type="text" name="timer" id="timerField" />
+                  <select id="timer-desc">
+                    <option value="min">Minutes</option>
+                    <option value="sec">Seconds</option>
+                  </select>
+                </td>
+                <td>
+                  <button class="btn btn-primary" onclick="startTimer()">
+                    start
+                  </button>
+                </td>
+                <td>
+                  <button class="btn btn-primary" onclick="stopTimer()">
+                    reset
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+            <tfoot></tfoot>
+          </table>
+        </form>
+        <div id="timer" class="text-center">
+          <audio id="audio" controls>
+            <source src="./static/audio.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
